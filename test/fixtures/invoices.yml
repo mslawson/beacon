@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  invoice_date: 2014-09-03 12:39:21
+  file_num: MyString
+  job_name: MyString
+  job_loc: MyString
+
+two:
+  invoice_date: 2014-09-03 12:39:21
+  file_num: MyString
+  job_name: MyString
+  job_loc: MyString

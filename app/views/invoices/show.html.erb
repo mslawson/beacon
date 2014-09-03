@@ -1,0 +1,25 @@
+<h2>Individual Jobs</h2>
+
+<table>
+	<tr>
+		<td><h4>Billing Invoice Date: </h4></td>
+		<td><%= @invoice.invoice_date.strftime("%m/%d/%Y") %></td>
+	</tr>
+	<tr>
+		<td><h4>File Number: </h4></td>
+		<td><%= @invoice.file_num %></td>
+	</tr>
+	<tr>
+		<td><h4>Job Name:</h4></td>
+		<td><%= @invoice.job_name %></td>
+	</tr>
+	<tr>
+		<td><h4>GC or Owner:</h4></td>
+		<td><%= @invoice.job_loc %></td>
+	</tr>
+</table>
+
+<%= link_to 'Home', invoices_path %> |
+<%= link_to 'Remove Job', invoice_path, method: :delete %>
+
+

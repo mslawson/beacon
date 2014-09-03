@@ -1,0 +1,19 @@
+<h2>Add a new invoice</h2>
+
+<%= form_for :invoice, url: invoices_path do |f| %>
+  <p>
+    Invoice Date: <%= f.datetime_field :invoice_date %><br>
+    File Number: <%= f.text_field :file_num %><br>
+    Job Name:	<%= f.text_field :job_name %> <br>
+    Job Location: <%= f.text_field :job_loc %>
+  </p>
+
+
+ 
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+
+  <%= link_to 'Home', invoices_path %>
+<% end %>
