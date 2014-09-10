@@ -1,12 +1,42 @@
+<div class="title">
 <h1>Beacon Contracting</h1>
 <h3>Job Costing Analysis Sheet</h3>
-
+</div>
+<div class="search">
+	<strong>Search for a Job:</strong>	<em>search here - box to come</em>
+</div>
+<div class="main_table">
 <table>
   <tr>
-    <th>Billing Invoice Date</th>
-    <th>File Number</th>
-    <th>Job Name</th>
-    <th>GC or Owner</th>
+    <th>Billing</th>
+    <th>File</th>
+    <th></th>
+    <th>GC or</th>
+    <th>Total</th>
+    <th>Price</th>
+    <th colspan = '2'>Budgeted</th>
+    <th colspan = '2'>Actual</th>
+    <th colspan = '2'>Hours</th>
+   	<th colspan = '2'>Budgeted</th>
+   	<th colspan = '2'>Actual</th>
+  </tr>
+  <tr>
+  	<th>Invoice Date</th>
+  	<th>Number</th>
+  	<th>Job Name</th>
+  	<th>Owner</th>
+  	<th>Price</th>
+  	<th>/Unit</th>
+  	<th>Units</th>
+  	<th>Yards</th>
+  	<th>Units</th>
+  	<th>Yards</th>
+  	<th>Budgeted</th>
+   	<th>Actual</th>
+  	<th>Units/Hr</th>
+  	<th>Yards/Hr</th>
+  	<th>Units/Hr</th>
+  	<th>Yards/Hr</th>
   </tr>
  
   <% @invoices.each do |invoice| %>
@@ -15,10 +45,24 @@
       <td><%= invoice.file_num %></td>
       <td><%= invoice.job_name %></td>
       <td><%= invoice.job_loc %></td>
-      <td><%= link_to 'Show Job', invoice_path(invoice) %> | </td>
-      <td><%= link_to 'Remove Job', invoice_path(invoice), method: :delete %></td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+			<td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+			<td><%= link_to 'Show Job', invoice_path(invoice) %></td>
+      <!-- <td><%= link_to 'Remove Job', invoice_path(invoice), method: :delete %></td> -->
     </tr>
+    	
   <% end %>
 </table>
+</div>
 <br>
 <%= link_to "Add a new job", new_invoice_path %>
